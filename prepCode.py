@@ -188,7 +188,8 @@ class Picker(Calculator):
 
     def change(self, trace):
         """
-
+        rewrite dist and azi to the trace's header
+        from the dictionary
         """
 
         station, channel = trace.stats.station, trace.stats.channel
