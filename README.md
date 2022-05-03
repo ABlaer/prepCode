@@ -15,7 +15,7 @@
 ```
 
 # prepCode
-🏔️ Preparation code for synthetic seismic data traces, that mimic real ones 🌎
+🏔️ Preparation code for synthetic seismic data traces, that mimics real ones 🌎
 
 prepCode (preparation Code) is aimed to mimic real seismic data traces.
 The code input are synthetic raw velocity seismogram (raw data) in SAC foramt.
