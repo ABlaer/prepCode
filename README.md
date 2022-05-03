@@ -23,6 +23,7 @@ prepCode output converts the raw data to Mini-SEED (MSEED) format, own
 stream of integers seismic data, contains all the traces, ready to be replay in 
 the Israeli Earthquake Early Warning (EEW) algorithm - EPIC.
 prepCode uses EPIC minimum velocity amplitude check (Pv), for determine the estimated P
+
 arrival for the station. 
 
 ![equation](https://latex.codecogs.com/svg.image?Pv=1e-5.5\&space;cm/sec&space;\quad&space;\mathbf{or}\quad3.16e-8\&space;m/sec^2)[^1].
@@ -37,8 +38,8 @@ arrival for the station.
 - first white noise adding, 110dB (relative to acceleration) and 120 sec long
 - second white noise adding, before P arrival
 - the re-processed seismogram's are multilayered by a gain factor (1e7 default)
-- the final prepCode value product is seismic acceleration data traces, with stram of
-   integers units (counts).
+- the final prepCode value product is seismic acceleration data traces, with stream of
+integers units (counts).
    
 
    
