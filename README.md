@@ -1,5 +1,5 @@
 
-Copyright (C) by Almog Blaer 
+*Copyright (c) 2022 by Almog Blaer*
 
 ```
 
@@ -25,7 +25,10 @@ the Israeli Earthquake Early Warning (EEW) algorithm - EPIC.
 prepCode uses EPIC minimum velocity amplitude check (Pv), for determine the estimated P
 arrival for the station. 
 
-Pv value is 1e-5.5 cm/sec or 3.16e-8 m/sec**2[^1].
+![equation](https://latex.codecogs.com/svg.image?Pv=1e-5.5\&space;cm/sec&space;\quad&space;\mathbf{or}\quad3.16e-8\&space;m/sec^2)[^1].
+
+[^1]:
+      please see: Chung, A. I., I. Henson, and R. M. Allen, 2019, Optimizing Earthquake Early Warning Performance: ElarmS-3, Seismological Researc    Letters, 90, no. 2A, 727–743, doi:10.1785/0220180192.
 
 ### The main code steps:
 
@@ -37,20 +40,24 @@ Pv value is 1e-5.5 cm/sec or 3.16e-8 m/sec**2[^1].
 - the final prepCode value product is seismic acceleration data traces, with stram of
    integers units (counts).
    
-[^note]: please see: Chung, A. I., I. Henson, and R. M. Allen, 2019, Optimizing Earthquake Early Warning Performance: ElarmS-3, Seismological Researc Letters, 90, no. 2A, 727–743, doi:10.1785/0220180192.
+
    
 ### Set-up
-- [ ] clone the prepCode repository
-- [ ] intall the deoendencies:
-     - [ ] numpy
+1. - [ ] clone the prepCode repository
+2. - [ ] install the dependencies:
+     - [ ] numpy 
      - [ ] matplotlib
      - [ ] obspy 
      - [ ] pandas
      - [ ] glob
-- [ ] make sure you got the right stations.d file, contains the columns: lat, lon and station name 
-- [ ] before running the code, update the channels file to m/sec**2 unit
-- [ ] enter script.ipynb notebook for more information
+3. - [ ] make sure you got the right stations.d file, contains the columns: lat, lon and station name 
+4. - [ ] before running the code, update the channels file in the early warning algorithm to m/sec**2 units
+5. - [ ] enter script.ipynb notebook for more information 🎉
 
 ### Credits
+prepCode relies on research with  Ben-Gurion University of the Negev and Geological Survey of Israel.
+I gratefully acknowledge Dr. Ran Nof and Prof. Michael Tsesarsky for taking part in this process. 
 
 ### License
+*Copyright (c) 2022 by Almog Blaer*.
+prepCode is released under the GNU Lesser General Public License version 3 or any later version. See LICENSE.TXT for full details.
