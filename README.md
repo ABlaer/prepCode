@@ -25,7 +25,7 @@ the Israeli Earthquake Early Warning (EEW) algorithm - EPIC.
 prepCode uses EPIC minimum velocity amplitude check (Pv), for determine the estimated P
 arrival for the station. 
 
-Pv value is 1e-5.5 cm/sec or 3.16e-8 m/sec**2 [^1]
+Pv value is 1e-5.5 cm/sec or 3.16e-8 m/sec**2[^1].
 
 ### The main code steps:
 
@@ -37,15 +37,19 @@ Pv value is 1e-5.5 cm/sec or 3.16e-8 m/sec**2 [^1]
 - the final prepCode value product is seismic acceleration data traces, with stram of
    integers units (counts).
    
-   [^note] please see: Chung, A. I., I. Henson, and R. M. Allen, 2019, Optimizing Earthquake Early Warning Performance: ElarmS-3, Seismological Researc Letters, 90, no. 2A, 727–743, doi:10.1785/0220180192.
+[^note]: please see: Chung, A. I., I. Henson, and R. M. Allen, 2019, Optimizing Earthquake Early Warning Performance: ElarmS-3, Seismological Researc Letters, 90, no. 2A, 727–743, doi:10.1785/0220180192.
    
 ### Set-up
--[] clone the prepCode repository
--[] 
--[] make sure you got the right stations.d file, with contains lat, lon and station name data
--[] 
-
-see script.ipynb jupyter notebook
+- [ ] clone the prepCode repository
+- [ ] intall the deoendencies:
+     - [ ] numpy
+     - [ ] matplotlib
+     - [ ] obspy 
+     - [ ] pandas
+     - [ ] glob
+- [ ] make sure you got the right stations.d file, contains the columns: lat, lon and station name 
+- [ ] before running the code, update the channels file to m/sec**2 unit
+- [ ] enter script.ipynb notebook for more information
 
 ### Credits
 
