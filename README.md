@@ -17,15 +17,14 @@
 # prepCode
 🏔️ Preparation code for synthetic seismic data traces, that mimics real ones 🌎
 
-prepCode (preparation Code) is aimed to mimic real seismic data traces.
-The code input are synthetic raw velocity seismogram (raw data) in SAC foramt.
-prepCode output converts the raw data to Mini-SEED (MSEED) format, own
-stream of integers seismic data, contains all the traces, ready to be replay in 
-the Israeli Earthquake Early Warning (EEW) algorithm - EPIC.
-prepCode uses EPIC minimum velocity amplitude check (Pv), for determine the estimated P
+PrepCode (preparation Code) is aimed to mimic real seismic data traces.
+The code input is synthetic raw velocity seismogram (raw data) in SAC format.
+Preclude output is converted to a Mini-SEED (MSEED) format, own
+Stream of Integers, contains all the traces, ready to be replayed in 
+the Israeli's Earthquake Early Warning (EEW) algorithm - EPIC.
+PrepCode uses EPIC minimum velocity amplitude check (Pv), for determining the estimated P arrival for the station. 
 
-arrival for the station. 
-
+The default amplitude check:
 ![equation](https://latex.codecogs.com/svg.image?Pv=1e-5.5\&space;cm/sec&space;\quad&space;\mathbf{or}\quad3.16e-8\&space;m/sec^2)[^1].
 
 [^1]:
