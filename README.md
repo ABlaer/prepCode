@@ -43,7 +43,7 @@ integers units (counts).
    
 
    
-### Set-up
+### Setup
 1. - [ ] clone the prepCode repository
 2. - [ ] install the dependencies:
      - [ ] numpy 
@@ -56,8 +56,8 @@ integers units (counts).
 5. - [ ] enter script.ipynb notebook for more information 🎉
 
 ### Credits
-prepCode relies on research with  Ben-Gurion University of the Negev and Geological Survey of Israel.
-I gratefully acknowledge Dr. Ran Nof and Prof. Michael Tsesarsky for taking part in this process. 
+
+prepCode relies on research with Ben-Gurion University of the Negev and Geological Survey of Israel. My thanks to Dr. Ran Nof and Professor Michael Tsesarsky for participating in this process.
 
 ### License
 *Copyright (c) 2022 by Almog Blaer*.
