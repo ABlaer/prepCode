@@ -36,9 +36,9 @@ The default amplitude check:
 - the raw data is converted to acceleration (m/sec**2) and resampled to 40 Hz
 - first white noise adding, 110dB (relative to acceleration) and 120 sec long
 - second white noise adding, before P arrival
-- the re-processed seismogram's are multilayered by a gain factor (1e7 default)
+- the re-processed seismogram's are multiplayed by gain factor (1e7 default)
 - the final prepCode value product is seismic acceleration data traces, with stream of
-integers units (counts).
+integers units (Counts).
    
 
    
