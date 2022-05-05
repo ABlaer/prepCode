@@ -15,7 +15,7 @@
 ```
 
 # prepCode
-🏔️ Preparation code for synthetic seismic data traces, that mimics real ones 🌎
+🏔️ Preparation code for synthetic seismic data traces, that mimic real ones 🌎
 
 PrepCode (preparation Code) is aimed to mimic real seismic data traces.
 The code input is synthetic raw velocity seismogram (raw data) in SAC format.
@@ -36,7 +36,7 @@ The default amplitude check:
 - the raw data is converted to acceleration (m/sec**2) and resampled to 40 Hz
 - first white noise adding, 110dB (relative to acceleration) and 120 sec long
 - second white noise adding, before P arrival
-- the re-processed seismogram's are multilayered by a gain factor (1e7 default)
+- the re-processed seismogram's are multiplayed by a gain factor (1e7 default)
 - the final prepCode value product is seismic acceleration data traces, with stream of
 integers units (counts).
    
