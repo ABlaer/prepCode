@@ -17,7 +17,7 @@
 # prepCode
 🏔️ Preparation code for synthetic seismic data traces, that mimics real ones 🌎
 
-prepCode preparation Code) is required to convert the model products
+prepCode (preparation Code) is required to convert the model products
 (the synthetic seismograms) to a format that corresponds to the 
 processing process recorded in the alarm algorithm. The raw synthetic
 seismograms are calculated by the finite-difference software, in velocity units,
@@ -37,11 +37,11 @@ contains all the traces, ready to be replayed in the Israeli's EEW algorithm - E
 PrepCode uses EPIC minimum velocity amplitude check (Pv), for determining the estimated P arrival for the station. 
 
 The default amplitude check:
-![equation](https://latex.codecogs.com/svg.image?Pv=1e-5.5\&space;cm/sec&space;\quad&space;\mathbf{or}\quad3.16e-8\&space;m/sec^2)[^1].
+![equation](https://latex.codecogs.com/svg.image?Pv=1e-5.5\&space;cm/sec&space;\quad&space;\mathbf{or}\quad3.16e-8\&space;m/sec^2)[^2].
 
 [^1]:
        Chung, A. I., I. Henson, and R. M. Allen, 2019, Optimizing Earthquake Early Warning Performance: ElarmS-3, Seismological Researc    Letters, 90, no. 2A, 727–743, doi:10.1785/0220180192.
-[^2]
+[^2]:
        Baer, M., and U. Kradolfer, 1987, an automatic phase picker for local_and teleseismic events.
 
 ### The main code steps:
