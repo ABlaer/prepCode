@@ -22,15 +22,6 @@ stream of integers seismic data, contains all the traces, ready to be replay in
 the Israeli Earthquake Early Warning (EEW) algorithm - EPIC.
 prepCode uses EPIC minimum velocity amplitude check (Pv), for determine the estimated P
 arrival for the station. Pv value is 1e-5.5 cm/sec or 3.16e-8 m/sec**2
-
-The main code steps are:
-1. reading raw data traces, with 67.31 Hz sample rate 
-2. the raw data is converted to acceleration (m/sec**2) and resampled to 40 Hz
-3. first white noise adding, 110dB (relative to acceleration) and 120 sec long
-4. second white noise adding, before P arrival
-5. the re-processed seismogram's are multilayered by a gain factor (1e7 default)
-6. the final prepCode value product is seismic acceleration data traces, with stram of
-   integers units (counts).
 """
 
 import numpy as np

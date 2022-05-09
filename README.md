@@ -32,12 +32,12 @@ The default amplitude check:
 
 ### The main code steps:
 
-- reading raw data traces, with 67.31 Hz sample rate 
-- the raw data is converted to acceleration (m/sec**2) and resampled to 40 Hz
+- reading raw data traces, with partial sample rate. 
+- the raw data is converted to acceleration (m/sec**2) and resampled to whole numbers (40 Hz as default)
 - first white noise adding, 110dB (relative to acceleration) and 120 sec long
 - second white noise adding, before P arrival
 - the re-processed seismogram's are multiplayed by gain factor (1e7 default)
-- the final prepCode value product is seismic acceleration data traces, with stream of
+- the final prepCode valuus are seismic acceleration data traces, with stream of
 integers units (Counts).
    
 
