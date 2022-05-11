@@ -91,7 +91,8 @@ class Calculator:
         Computes the distance between two geographic
         points on the WGS84 ellipsoid and the forward
         and backward azimuths between these points.
-        (see obspy API Overview: https://docs.obspy.org/packages/autogen/obspy.geodetics.base.gps2dist_azimuth.html)
+        (see obspy API Overview: https://docs.obspy.org/packages
+        /autogen/obspy.geodetics.base.gps2dist_azimuth.html)
         :param lat: latitude of the epicenter
         :param lon: longitude of the epicenter
         :return:  a tuple of distance and back-azimuth for
@@ -224,7 +225,11 @@ class Picker(Calculator):
         axs[i].set_xlabel('$time$, $sec$')
         axs[i].set_ylabel(r'$abs(log(Vel))$ ,$m/sec$')
 
-    def picture_arrivals(self, size=(20, 100), ylim=(1e-9, 1e-2), hspace=1, wspace=.1, to_save=True):
+    def picture_arrivals(self, size=(20, 100),
+                         ylim=(1e-9, 1e-2),
+                         hspace=1,
+                         wspace=.1,
+                         to_save=True):
         """
         gets the next raw trace from the iterator.
         shows the P arrival point on absolute log trace,
@@ -416,7 +421,7 @@ class Picker(Calculator):
 
         ax3.legend()
         ax3.grid(True)
-        ax3.set_title(f'd)                              $Step$ $V$      |      No. samples: {trace[0].stats.npts}   |  '
+        ax3.set_title(f'd)                              $Step$ $IV$      |      No. samples: {trace[0].stats.npts}   |  '
                       f'sampling rate:  {str(round(trace[0].stats.sampling_rate, 2))} $Hz$')
         ax3.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
         ax3.yaxis.set_major_locator(MultipleLocator(round(max(trace[0].data)) / 10))
@@ -475,5 +480,5 @@ class Picker(Calculator):
             except StopIteration:
                 break
 
-    if '__name' == '__main__':
-        Picker.run()
+if __name__ == '__main__':
+    Picker().run()
