@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='prepCode',
-    version='1.1',
+    version='1.2',
     install_requires=['numpy', 'obspy', 'pandas', 'glob', 'matplotlib'],
     url='www.github.com/ABlaer',
     license='MIT',

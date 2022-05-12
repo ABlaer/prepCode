@@ -1,10 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9e5688b-0b70-4ae1-a7f9-5f46b491aca8" name="Changes" comment="License file">
+    <list default="true" id="d9e5688b-0b70-4ae1-a7f9-5f46b491aca8" name="Changes" comment="last __name__ condition statement">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prepCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prepCode.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_traces/nothing" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prepCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/prepCode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/script.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/AFK.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/AFK.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/AKAT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/AKAT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ALMG.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ALMG.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ALMT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ALMT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ALN.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ALN.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/AMID.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/AMID.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ARD.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ARD.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ARIL.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ARIL.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/AZGD.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/AZGD.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/BLGI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/BLGI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/BRSH.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/BRSH.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/BSHV.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/BSHV.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/BTNR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/BTNR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/BTOR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/BTOR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/BTSH.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/BTSH.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/CVYN.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/CVYN.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/DMNA.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/DMNA.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/DSHN.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/DSHN.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/DSI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/DSI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/EFSH.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/EFSH.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/EKDM.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/EKDM.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ENGV.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ENGV.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/EOFR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/EOFR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/EYHV.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/EYHV.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/GDOT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/GDOT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/GEM.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/GEM.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/GLHS.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/GLHS.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/GNNR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/GNNR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/GOSH.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/GOSH.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/HDNS.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/HDNS.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/HMDT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/HMDT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/HMRA.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/HMRA.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/HNIT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/HNIT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/LOD.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/LOD.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/LVBS.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/LVBS.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MEFR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MEFR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MEHL.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MEHL.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MGDL.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MGDL.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MLDT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MLDT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MMLI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MMLI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MNHM.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MNHM.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MRHV.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MRHV.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MRON.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MRON.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MSAM.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MSAM.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MSBI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MSBI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MSLM.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MSLM.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MSPR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MSPR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/MTLA.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/MTLA.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/NAMA.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/NAMA.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/NATI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/NATI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/NMSR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/NMSR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/NTGD.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/NTGD.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/NTKR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/NTKR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/NVZR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/NVZR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/OFRI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/OFRI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ORTZ.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ORTZ.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/OVNT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/OVNT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/P88.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/P88.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/PZL.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/PZL.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/RGMN.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/RGMN.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/RMNI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/RMNI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/RMOT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/RMOT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ROI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ROI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/RSFT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/RSFT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/RSPN.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/RSPN.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/SDBK.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/SDBK.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/SDOM.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/SDOM.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/SHGL.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/SHGL.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/SLMZ.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/SLMZ.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/SLTI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/SLTI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/SPR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/SPR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/TMR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/TMR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/TVR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/TVR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/VJRH.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/VJRH.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/WZMN.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/WZMN.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/YATR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/YATR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/YFTH.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/YFTH.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/YGR.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/YGR.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/YITV.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/YITV.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/YLIM.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/YLIM.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ZEFT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ZEFT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ZFRI.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ZFRI.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ZN5A.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ZN5A.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ZRT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ZRT.z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces/ZUKM.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ZUKM.z" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +116,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652094477902</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="last __name__ condition statement">
+      <created>1652299922511</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652299922512</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -85,6 +181,7 @@
     <MESSAGE value="add reference" />
     <MESSAGE value="reference changes" />
     <MESSAGE value="License file" />
-    <option name="LAST_COMMIT_MESSAGE" value="License file" />
+    <MESSAGE value="last __name__ condition statement" />
+    <option name="LAST_COMMIT_MESSAGE" value="last __name__ condition statement" />
   </component>
 </project>

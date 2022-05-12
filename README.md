@@ -66,7 +66,21 @@ integers units (Counts).
      - [ ] glob
 3. - [ ] make sure you got the right stations.d file, contains the columns: lat, lon and station name 
 4. - [ ] before running the code, update the channels file in the early warning algorithm to m/sec**2 units
-5. - [ ] enter script.ipynb notebook for more information 🎉
+5.     when invoking prepCode through command-line , you may specify any of these options:
+
+       usage: prepCode.py [-h] [-m MAG] [-d DEPTH] [-t LAT] [-n LON]
+
+       Preparation code for synthetic data traces, that mimics real ones
+
+       options:
+       -h, --help            show this help message and exit
+       -m MAG, --mag MAG     Synthetic event magnitude; default = 6.5 Mw
+       -d DEPTH, --depth DEPTH
+                        The event depth; default = 10 km
+       -t LAT, --lat LAT     Latitude; default = 31.9299 deg
+       -n LON, --lon LON     Longitude; default = 35.5136 deg
+
+6. - [ ] enter script.ipynb notebook for more information 🎉
 
 ### Credits
 

@@ -23,6 +23,7 @@ the Israeli Earthquake Early Warning (EEW) algorithm - EPIC.
 prepCode uses EPIC minimum velocity amplitude check (Pv), for determine the estimated P
 arrival for the station. Pv value is 1e-5.5 cm/sec or 3.16e-8 m/sec**2
 """
+import argparse
 
 import numpy as np
 import obspy
@@ -36,7 +37,9 @@ from obspy import Trace
 from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,
                                AutoMinorLocator)
 import matplotlib.pylab as plt
+
 plt.rcParams.update({'font.size': 6})
+
 
 class Calculator:
     """
@@ -45,10 +48,10 @@ class Calculator:
     implementing the values in the traces (3 channels X stations)
     """
     # global variables from the
-      # stations file (lat lon station)
+    # stations file (lat lon station)
     _lines = []  # list of [lat lon station] lines
 
-    def __init__(self, mag: float, depth: float, lat: float, lon: float):
+    def __init__(self, mag=6.5, depth=10, lat=31.9299, lon=35.5136):
 
         self.mag = mag  # The event magnitude
         self.depth = depth  # Te event depth
@@ -141,15 +144,15 @@ class Calculator:
         P_arrivals = self.pos(trace, _amp=Picker.run.__defaults__[0])
         station = trace.stats.station
         for ln in self._lines:
-            try:
-                if ln[2] == station:
-                    dist, azi, _ = self.calc(float(ln[0]),
-                                             float(ln[1]))  # each station
-                    return station, ln[0], ln[1], dist, azi, P_arrivals
-                else:
-                    continue
-            except TypeError:
-                return -1
+            if ln[2] == station:
+                dist, azi, _ = self.calc(float(ln[0]),
+                                         float(ln[1]))  # each station
+                return station, ln[0], ln[1], dist, azi, P_arrivals
+            else:
+                continue
+
+
+dict_dist_azi = dict()
 
 
 class Picker(Calculator):
@@ -163,9 +166,8 @@ class Picker(Calculator):
              for all given stations
     """
 
-    def __init__(self, mag: float, depth: float, lat: float, lon: float):
+    def __init__(self, mag=6.5, depth=10, lat=31.9299, lon=35.5136):
         super().__init__(mag, depth, lat, lon)
-        self.dict_dist_azi = dict()
 
     def read_z(cls):
         """
@@ -183,10 +185,10 @@ class Picker(Calculator):
         rewrite dist and azi to the trace's header
         from the dictionary
         """
-
+        global dict_dist_azi
         station, channel = trace.stats.station, trace.stats.channel
-        trace.stats.sac.dist, trace.stats.sac.az = (self.dict_dist_azi[station][2],
-                                                    self.dict_dist_azi[station][3])
+        trace.stats.sac.dist, trace.stats.sac.az = (dict_dist_azi[station][2],
+                                                    dict_dist_azi[station][3])
         trace.write(f'traces/{station}.{channel.lower()}', format='SAC')
         self.pos(trace, _amp=self.run.__defaults__[0])
 
@@ -195,7 +197,8 @@ class Picker(Calculator):
         create a figure and set of subplots
         :return figure with array of axes
         """
-        fig, axs = plt.subplots(len(self.dict_dist_azi) // 2, 2, figsize=size, sharey=True)
+        global dict_dist_azi
+        fig, axs = plt.subplots(len(dict_dist_azi) // 2, 2, figsize=size, sharey=True)
         fig.subplots_adjust(hspace=hspace, wspace=wspace)
         axs = axs.ravel()
         return fig, axs
@@ -245,6 +248,8 @@ class Picker(Calculator):
                 rec = next(stream)
                 self.lines(rec, i, axs, ylim)
                 i += 1
+            except IndexError:
+                continue
             except StopIteration:
                 if to_save:
                     plt.savefig('P_arrival.pdf',
@@ -309,11 +314,14 @@ class Picker(Calculator):
         :param _noise_min: lower boundary of the output interval, relative to acc
         :return: uniformly distributed white noise with (P arrival / delta) samples
         """
-
+        global dict_dist_azi
         station, channel = self.features(trace)
-        P_arrival = self.dict_dist_azi.get(station)[4]
-        sample = int(P_arrival / trace.stats.delta)
-        trace.data[:sample] = np.random.uniform(_noise_min, _noise_max, sample)
+        try:
+            P_arrival = dict_dist_azi.get(station)[4]
+            sample = int(P_arrival / trace.stats.delta)
+            trace.data[:sample] = np.random.uniform(_noise_min, _noise_max, sample)
+        except TypeError:
+            return None
 
     def two_sec_noise(self, trace, _noise_min, _noise_max, _sample_rate, _sec):
         """
@@ -421,8 +429,9 @@ class Picker(Calculator):
 
         ax3.legend()
         ax3.grid(True)
-        ax3.set_title(f'd)                              $Step$ $IV$      |      No. samples: {trace[0].stats.npts}   |  '
-                      f'sampling rate:  {str(round(trace[0].stats.sampling_rate, 2))} $Hz$')
+        ax3.set_title(
+            f'd)                              $Step$ $IV$      |      No. samples: {trace[0].stats.npts}   |  '
+            f'sampling rate:  {str(round(trace[0].stats.sampling_rate, 2))} $Hz$')
         ax3.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
         ax3.yaxis.set_major_locator(MultipleLocator(round(max(trace[0].data)) / 10))
         ax3.set_xlabel('$Time ,sec$', labelpad=5)
@@ -434,25 +443,22 @@ class Picker(Calculator):
         and keys: lat, lon , dist, azi, P arrival
         :return: dict_dist_azi
         """
-
+        global dict_dist_azi
         stream = self.read_z()  # implementing dist and azi in each trace
         while True:
             try:
                 rec = next(stream)  # yield new trace from the generator
-                if self.imp(rec) == -1:
-                    print(f"There is missing trace for {ln[2]} station")
-                    continue
-                else:
-                    station, lat, lon, dist, azi, P_arrivals = self.imp(rec)  # adding distance and azi to the trace
-                    self.dict_dist_azi[station] = (round(float(lat), 2),
-                                                   round(float(lon), 2),
-                                                   round(dist / 1000, 2),
-                                                   round(azi, 2),
-                                                   round(P_arrivals, 2))
-                    self.change(rec)
+                station, lat, lon, dist, azi, P_arrivals = self.imp(rec)  # adding distance and azi to the trace
+                dict_dist_azi[station] = (round(float(lat), 2),
+                                          round(float(lon), 2),
+                                          round(dist / 1000, 2),
+                                          round(azi, 2),
+                                          round(P_arrivals, 2))
+                self.change(rec)
+            except TypeError:
+                continue
             except StopIteration:
                 break
-        return self.dict_dist_azi
 
     def run(self, _amp=3.16e-8,
             _noise_max=1e-6,
@@ -461,24 +467,47 @@ class Picker(Calculator):
             _sec=120,
             _sample_rate=40):
 
-        dict_dist_azi = self.write_dict()
+        global dict_dist_azi
         stream = self.read_all()
+        self.write_dict()
         while True:
             try:
                 rec = next(stream)  # read all the channels to stream and generate it to generator
                 station, channel = self.features(rec)  # first: change the channels and network symbols
-                self.to_acc(rec, _sample_rate=_sample_rate)  # second: resample the traces and convert them to acc
-                self.noise_before_trigger(rec, _noise_max=_noise_max, _noise_min=_noise_min)  # third: first adding
-                # white noise before the P arrival time
-                self.two_sec_noise(rec, _noise_min=_noise_min,
-                                   _noise_max=_noise_max,
-                                   _sample_rate=_sample_rate,
-                                   _sec=_sec)  # forth: second 120 sec white noise adding to the trace beginning
-                self.gain(rec, _gain=_gain)  # fifth: multiply by 1e7 gain
-                rec.write(f'new_traces/{station}.new_{channel.lower()}', format='SAC')
-
+                if station is None or channel is None:
+                    print(r'{station} has problem')
+                    continue
+                else:
+                    self.to_acc(rec, _sample_rate=_sample_rate)  # second: resample the traces and convert them to acc
+                    self.noise_before_trigger(rec,
+                                              _noise_max=_noise_max,
+                                              _noise_min=_noise_min)  # third: first adding
+                    # white noise before the P arrival time
+                    self.two_sec_noise(rec,
+                                       _noise_min=_noise_min,
+                                       _noise_max=_noise_max,
+                                       _sample_rate=_sample_rate,
+                                       _sec=_sec)  # forth: second 120 sec white noise adding to the trace beginning
+                    self.gain(rec, _gain=_gain)  # fifth: multiply by 1e7 gain
+                    rec.write(f'new_traces/{station}.new_{channel.lower()}', format='SAC')
             except StopIteration:
                 break
 
+
 if __name__ == '__main__':
-    Picker().run()
+    parser = argparse.ArgumentParser(
+        description='Preparation code for synthetic data traces, that mimics real ones')
+    parser.add_argument('-m', '--mag', type=float, default=6.5,
+                        help='Synthetic event magnitude; default = 6.5 Mw')
+    parser.add_argument('-d', '--depth', type=float, default=10,
+                        help='The event depth; default = 10 km')
+    parser.add_argument('-t', '--lat', type=float, default=31.9299,
+                        help='Latitude; default = 31.9299 deg')
+    parser.add_argument('-n', '--lon', type=float, default=35.5136,
+                        help='Longitude; default = 35.5136 deg')
+    args = parser.parse_args()
+    event = Picker(args.mag, args.depth, args.lat, args.lon)
+    print(vars(args))
+    event.run()
+    st = read('new_traces/*.new_*')
+    st.write(f'new_traces/Mw{args.mag}_{args.depth}km.mseed', 'MSEED')
