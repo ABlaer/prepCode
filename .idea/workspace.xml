@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9e5688b-0b70-4ae1-a7f9-5f46b491aca8" name="Changes" comment="version 1.2&#10;mainly Parser dor command-line options">
+    <list default="true" id="d9e5688b-0b70-4ae1-a7f9-5f46b491aca8" name="Changes" comment="new_traces">
+      <change afterPath="$PROJECT_DIR$/new_traces/AFK.new_bne" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_traces/Mw6.3_8.0km.mseed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traces/AFK.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/AFK.z" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traces/AKAT.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/AKAT.z" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traces/ALMG.z" beforeDir="false" afterPath="$PROJECT_DIR$/traces/ALMG.z" afterDir="false" />
@@ -163,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652348787780</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="new_traces dir">
+      <created>1652349117866</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652349117866</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +194,7 @@
     <MESSAGE value="License file" />
     <MESSAGE value="last __name__ condition statement" />
     <MESSAGE value="version 1.2&#10;mainly Parser dor command-line options" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1.2&#10;mainly Parser dor command-line options" />
+    <MESSAGE value="new_traces dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="new_traces dir" />
   </component>
 </project>
