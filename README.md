@@ -34,7 +34,7 @@ before the recorded processing. PrepCode  is aimed to mimic real seismic data tr
 The code input is synthetic raw velocity seismogram (raw data) in SAC format.
 Preclude output is converted to a Mini-SEED (MSEED) format, own Stream of Integers, 
 contains all the traces, ready to be replayed in EPIC.
-PrepCode uses EPIC minimum velocity amplitude check (![equation](https://latex.codecogs.com/svg.image?Pv&spac)),
+PrepCode uses EPIC minimum velocity amplitude check (![equation](https://latex.codecogs.com/svg.image?Pv&space;)),
 for determining the estimated P arrival for the station. 
 
 The default amplitude check:
